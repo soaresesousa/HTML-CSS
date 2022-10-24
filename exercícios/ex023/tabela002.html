@@ -15,6 +15,13 @@
             border-collapse: collapse;
         }
 
+        caption {
+            background-color: lightgray;
+            padding: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
         td, th {
             border: 1px solid black;           
             padding: 10px;
@@ -39,12 +46,13 @@
             tfoot
     -->
     <table>
+        <caption>População das unidades federativas</caption>
         <thead>
             <tr>
-                <th>
+                <th scope="col">
                     Estado
                 </th>
-                <th>
+                <th scope="col" style="width: 50px;">
                     População
                 </th>
             </tr>
@@ -93,7 +101,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>total</th>
+                <th scope="row">total</th>
                 <td>0000</td>
             </tr>
         </tfoot>
