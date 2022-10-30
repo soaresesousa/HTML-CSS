@@ -4,9 +4,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#container {
+    overflow-x: auto;
+}
+
 table {
     border-collapse: collapse;
-    width: 400px;
+    width: 700px;
 }
 
 thead {
