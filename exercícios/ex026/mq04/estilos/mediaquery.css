@@ -2,6 +2,77 @@
 
 /*Todas as outras versões*/
 
+/*Typical device breakpoints
+pequenas telas: até 600px
+celular: 600px até 768px
+tablet: 768px até 992px
+desktop: 992px até 1200px
+telas grandes: acima de 1200px
+*/
+
 @media print {
-    
+    body {
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    #phone {display: none;}
+    #tablet {display: none;}
+    #desktop {display: none;}
+    #tv {display: none;}
+    #print {display: block;}
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'versão criada por Moisés Neto';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {/*tablet*/
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    #phone {display: none;}
+    #tablet {display: block;}
+    #desktop {display: none;}
+    #tv {display: none;}
+    #print {display: none;}
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) { /*desktop*/
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    #phone {display: none;}
+    #tablet {display: none;}
+    #desktop {display: block;}
+    #tv {display: none;}
+    #print {display: none;}
+}
+
+@media screen and (min-width: 1200px) { /*Telas grandes*/
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    #phone {display: none;}
+    #tablet {display: none;}
+    #desktop {display: none;}
+    #tv {display: block;}
+    #print {display: none;}
+
+    main {
+        width: 700px;
+    }
 }
